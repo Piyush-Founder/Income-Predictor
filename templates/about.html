@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Model — Income Predictor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/about.css">
+</head>
+<body>
+  <section class="about-page">
+    <header class="navbar">
+      <div class="logo">Income Predictor</div>
+      <nav class="nav-links">
+        <a href="/">Home</a>
+        <a href="/predict-page">Prediction</a>
+        <a href="#" class="login-btn">Sign In / Login</a>
+      </nav>
+    </header>
+
+    <div class="about-wrapper">
+      <div class="about-left">
+        <p class="subheading">Machine Learning Project</p>
+        <h1>Model Overview</h1>
+        <p class="description">
+          This model predicts whether a person's income is likely to be above 50K or not based on demographic and work-related details.
+        </p>
+      </div>
+
+      <div class="about-right">
+        <div class="info-card">
+          <h2>What it does</h2>
+          <div class="text-block">
+            <p>
+              The model takes user inputs like age, education, workclass, occupation, hours per week,
+              capital gain, capital loss, and a few other details.
+            </p>
+            <p>After that, it returns one of two outputs:</p>
+            <p><strong>0 = &lt;=50K</strong></p>
+            <p><strong>1 = &gt;50K</strong></p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h2>Model used</h2>
+          <div class="info-grid">
+            <div class="info-item">
+              <span class="label">Algorithm</span>
+              <span class="value">XGBoost Classifier</span>
+            </div>
+            <div class="info-item">
+              <span class="label">Type</span>
+              <span class="value">Binary Classification</span>
+            </div>
+            <div class="info-item">
+              <span class="label">Dataset</span>
+              <span class="value">Adult Income Dataset</span>
+            </div>
+            <div class="info-item">
+              <span class="label">Target</span>
+              <span class="value">Income Group</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h2>Best result</h2>
+          <div class="metrics-grid">
+            <div class="metric-box">
+              <h3>Accuracy</h3>
+              <p>0.8362</p>
+            </div>
+            <div class="metric-box">
+              <h3>Precision</h3>
+              <p>0.6156</p>
+            </div>
+            <div class="metric-box">
+              <h3>Recall</h3>
+              <p>0.8508</p>
+            </div>
+            <div class="metric-box">
+              <h3>F1 Score</h3>
+              <p>0.7143</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h2>Confusion matrix</h2>
+          <div class="matrix-box">
+            <p><strong>TN:</strong> 4112</p>
+            <p><strong>FP:</strong> 833</p>
+            <p><strong>FN:</strong> 234</p>
+            <p><strong>TP:</strong> 1334</p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h2>Input fields used</h2>
+          <ul class="feature-list">
+            <li>Age</li>
+            <li>Workclass</li>
+            <li>Fnlwgt</li>
+            <li>Education</li>
+            <li>Education Number</li>
+            <li>Marital Status</li>
+            <li>Occupation</li>
+            <li>Relationship</li>
+            <li>Race</li>
+            <li>Sex</li>
+            <li>Capital Gain</li>
+            <li>Capital Loss</li>
+            <li>Hours Per Week</li>
+            <li>Native Country</li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <h2>How it performed</h2>
+          <div class="text-block">
+            <p><strong>Accuracy</strong> shows the overall correct predictions.</p>
+            <p><strong>Precision</strong> shows how often the positive prediction was correct.</p>
+            <p><strong>Recall</strong> shows how many real positive cases the model was able to catch.</p>
+            <p><strong>F1 Score</strong> gives the balance between precision and recall.</p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h2>Limitations</h2>
+          <div class="text-block">
+            <p>This is a prediction model, not a guarantee.</p>
+            <p>It should be used as support, not as final truth.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
