@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0f0f0f;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+}
+
+.about-page {
+  min-height: 100vh;
+  background:
+    linear-gradient(135deg, rgba(0,180,160,0.14) 0%, rgba(15,15,15,0.0) 50%),
+    linear-gradient(to bottom right, #0f0f0f 0%, #1a1a2e 40%, #16213e 70%, #0f3460 100%);
+}
+
+.navbar {
+  width: 100%;
+  padding: 30px 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: "Playfair Display", serif;
+  font-size: 31px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.login-btn {
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: transparent;
+}
+
+.about-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 30px 72px 60px;
+}
+
+.about-left {
+  max-width: 420px;
+  position: sticky;
+  top: 30px;
+}
+
+.subheading {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 4.5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 22px;
+}
+
+.about-left h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 68px;
+  line-height: 0.98;
+  font-weight: 500;
+  letter-spacing: -1.2px;
+  margin-bottom: 24px;
+}
+
+.description {
+  max-width: 400px;
+  font-size: 17px;
+  line-height: 1.8;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.about-right {
+  width: 100%;
+  max-width: 760px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.info-card {
+  width: 100%;
+  padding: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 22px;
+  backdrop-filter: blur(10px);
+  background: rgba(12, 12, 12, 0.55);
+}
+
+.info-card h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.label {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.value {
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.metric-box {
+  padding: 18px 14px;
+  border-radius: 18px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.metric-box h3 {
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.metric-box p {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.matrix-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.matrix-box p {
+  padding: 16px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  font-size: 16px;
+}
+
+.feature-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  list-style: none;
+}
+
+.feature-list li {
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  font-size: 15px;
+}
+
+.text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.text-block p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+@media (max-width: 1100px) {
+  .about-wrapper {
+    flex-direction: column;
+  }
+
+  .about-left {
+    max-width: 100%;
+    position: static;
+  }
+
+  .description {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 24px 24px;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .nav-links {
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .about-wrapper {
+    padding: 20px 24px 40px;
+  }
+
+  .about-left h1 {
+    font-size: 48px;
+  }
+
+  .info-grid,
+  .metrics-grid,
+  .matrix-box,
+  .feature-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 540px) {
+  .logo {
+    font-size: 24px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+  .about-left h1 {
+    font-size: 36px;
+  }
+
+  .description,
+  .text-block p {
+    font-size: 15px;
+  }
+
+  .info-card {
+    padding: 20px;
+  }
+
+  .info-card h2 {
+    font-size: 24px;
+  }
+}
